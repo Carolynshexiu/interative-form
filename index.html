@@ -69,3 +69,117 @@
     </script>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Donor/Partner Information Form</title>
+    <style>
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            width: 300px;
+            margin-right: 10px;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Donor/Partner Information Form</h1>
+    <form id="donorForm" action="https://your-backend-service-url" method="post">
+        <div class="form-group">
+            <label for="fullName">Full Legal Name of Potential Donor/Partner:</label>
+            <input type="text" id="fullName" name="fullName" required>
+        </div>
+
+        <div class="form-group">
+            <label for="donorType">Type of Donor:</label>
+            <select id="donorType" name="donorType">
+                <option value="company">Company</option>
+                <option value="foundation">Foundation</option>
+                <option value="individual">Individual</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="donorLocation">Donor Location / Nationality if Individual:</label>
+            <input type="text" id="donorLocation" name="donorLocation" required>
+        </div>
+
+        <div class="form-group">
+            <label for="contactPerson">Contact Person (Donor):</label>
+            <input type="text" id="contactPerson" name="contactPerson">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address (Donor Contact):</label>
+            <input type="email" id="email" name="email">
+        </div>
+
+        <div class="form-group">
+            <label for="website">Donor Website:</label>
+            <input type="url" id="website" name="website">
+        </div>
+
+        <div class="form-group">
+            <label for="requestingSector">Requesting Sector/Office/Institute (UNESCO):</label>
+            <input type="text" id="requestingSector" name="requestingSector" required>
+        </div>
+
+        <div class="form-group">
+            <label for="contactName1">Contact (UNESCO) Name:</label>
+            <input type="text" id="contactName1" name="contactName1" required>
+        </div>
+
+        <div class="form-group">
+            <label for="contactEmail1">Contact (UNESCO) Email:</label>
+            <input type="email" id="contactEmail1" name="contactEmail1" required>
+        </div>
+
+        <div class="form-group">
+            <label for="contactName2">Additional Contact (UNESCO) Name:</label>
+            <input type="text" id="contactName2" name="contactName2">
+        </div>
+
+        <div class="form-group">
+            <label for="contactEmail2">Additional Contact (UNESCO) Email:</label>
+            <input type="email" id="contactEmail2" name="contactEmail2">
+        </div>
+
+        <div class="form-group">
+            <label for="engagementType">Type of engagement:</label>
+            <input type="text" id="engagementType" name="engagementType" required>
+        </div>
+
+        <div class="form-group">
+            <label for="contributionSize">Size of Potential Contribution:</label>
+            <input type="text" id="contributionSize" name="contributionSize">
+        </div>
+
+        <div class="form-group">
+            <label for="contributionPurpose">Purpose of Contribution (one sentence only):</label>
+            <input type="text" id="contributionPurpose" name="contributionPurpose" required>
+        </div>
+
+        <div class="form-group">
+            <label for="urgentSignature">Is signature urgent?</label>
+            <select id="urgentSignature" name="urgentSignature" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="urgentExplanation">If urgent, please explain why:</label>
+            <textarea id="urgentExplanation" name="urgentExplanation"></textarea>
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

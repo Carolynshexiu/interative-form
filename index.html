@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Donor/Partner Information Form</title>
+</head>
+<body>
+    <h1>Donor/Partner Information Form</h1>
+    <form id="donorForm">
+        <label for="fullName">Full Legal Name of Potential Donor/Partner:</label><br>
+        <input type="text" id="fullName" name="fullName" required><br><br>
+
+        <label for="donorType">Type of Donor:</label><br>
+        <select id="donorType" name="donorType">
+            <option value="company">Company</option>
+            <option value="foundation">Foundation</option>
+            <option value="individual">Individual</option>
+        </select><br><br>
+
+        <label for="donorLocation">Donor Location / Nationality if Individual:</label><br>
+        <input type="text" id="donorLocation" name="donorLocation" required><br><br>
+
+        <label for="contactPerson">Contact Person (Donor):</label><br>
+        <input type="text" id="contactPerson" name="contactPerson"><br><br>
+
+        <label for="email">Email Address (Donor Contact):</label><br>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="website">Donor Website:</label><br>
+        <input type="url" id="website" name="website"><br><br>
+
+        <label for="requestingSector">Requesting Sector/Office/Institute (UNESCO):</label><br>
+        <input type="text" id="requestingSector" name="requestingSector" required><br><br>
+
+        <label for="contactUNESCO">Contact (UNESCO):</label><br>
+        <label for="contactName1">Name:</label><br>
+        <input type="text" id="contactName1" name="contactName1" required><br>
+        <label for="contactEmail1">Email:</label><br>
+        <input type="email" id="contactEmail1" name="contactEmail1" required><br><br>
+        <label for="contactName2">Name:</label><br>
+        <input type="text" id="contactName2" name="contactName2"><br>
+        <label for="contactEmail2">Email:</label><br>
+        <input type="email" id="contactEmail2" name="contactEmail2"><br><br>
+
+        <label for="engagementType">Type of engagement:</label><br>
+        <input type="text" id="engagementType" name="engagementType" required><br><br>
+
+        <label for="contributionSize">Size of Potential Contribution:</label><br>
+        <input type="text" id="contributionSize" name="contributionSize"><br><br>
+
+        <label for="contributionPurpose">Purpose of Contribution (one sentence only):</label><br>
+        <input type="text" id="contributionPurpose" name="contributionPurpose" required><br><br>
+
+        <label for="urgentSignature">Is signature urgent?</label><br>
+        <select id="urgentSignature" name="urgentSignature" required>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select><br><br>
+
+        <label for="urgentExplanation">If urgent, please explain why:</label><br>
+        <textarea id="urgentExplanation" name="urgentExplanation"></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        document.getElementById('donorForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Form submitted!');
+        });
+    </script>
+</body>
+</html>
